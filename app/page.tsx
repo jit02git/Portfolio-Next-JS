@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 
 import dynamic from "next/dynamic";
@@ -6,7 +7,7 @@ import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 
-// Disable SSR for components that access `document`, `window`, or browser-only features
+// Disable SSR for components that may use browser-only APIs
 const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
 const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
 const Clients = dynamic(() => import("@/components/Clients"), { ssr: false });

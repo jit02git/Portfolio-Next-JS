@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from 'next/image';
 
 import { companies } from "@/data";
 // import { InfiniteMovingCards } from "./ui/InfiniteCards";
@@ -29,11 +30,10 @@ const Clients = () => {
           {companies.map((company) => (
             <React.Fragment key={company.id}>
               <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-10 w-5"
-                />
+                <Image src={company.img} alt={company.name} className="md:w-10 w-5"/>
+                
+                {/* <Image src="/your-image.png" alt="desc" width={400} height={300} /> */}
+
                 {/* <img
                   src={company.nameImg}
                   alt={company.name}
